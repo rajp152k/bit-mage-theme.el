@@ -29,7 +29,7 @@
       (wht "#FFFFFF")
       (grn "#00FF00"))
   (custom-theme-set-faces
-   `bit-mage
+   `bit-mage-theme
    `(mouse ((t (:background ,blck))))
    `(cursor ((t (:background ,prpl))))
    `(border ((t (:background ,blck))))
