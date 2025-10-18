@@ -25,7 +25,7 @@
   "(Bit-Mage)")
 
 
-custom-theme-set-faces
+(custom-theme-set-faces
  'bit-mage
  '(mouse ((t (:background "#000000"))))
  '(cursor ((t (:background "white"))))
