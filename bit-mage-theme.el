@@ -21,7 +21,7 @@
 ;;; Code:
 
 
-(deftheme bit-mage-theme
+(deftheme bit-mage
   "(Bit-Mage)")
 
 ;; (cl-psetf  'blck "#000000"
@@ -29,7 +29,7 @@
 ;;            'wht "#FFFFFF")
 
   (custom-theme-set-faces
-   'bit-mage-theme
+   'bit-mage
    '(mouse ((t (:background "#000000"))))
    '(cursor ((t (:background "#A020F0"))))
    '(border ((t (:background "#000000"))))
@@ -258,5 +258,5 @@
    '(widget-single-line-field-face ((t (nil))))
    '(default ((t (:background "black" :foreground "#00CC00")))))
 
-(provide 'bit-mage-theme)
+(provide 'bit-mage)
 ;;; bit-mage-theme.el ends here
