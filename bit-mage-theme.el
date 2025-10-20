@@ -126,7 +126,11 @@
  '(widget-inactive-face ((t (nil))))
  '(widget-single-line-field-face ((t (nil))))
 
- '(doom-dashboard-banner ((t (:bold t :foreground "purple"))))
+ '(doom-dashboard-banner ((t (:bold t :foreground "slateblue"))))
+ '(doom-dashboard-loaded ((t (:bold t :foreground "slateblue"))))
+ '(doom-dashboard-menu-desc ((t (:bold t :foreground "slateblue"))))
+ '(doom-dashboard-menu-title ((t (:bold t :foreground "slateblue"))))
+ '(doom-dashboard-footer-icon ((t (:bold t :foreground "slateblue"))))
 
  '(default ((t (:background "black" :foreground "green")))))
 
