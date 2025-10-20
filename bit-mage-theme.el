@@ -132,6 +132,10 @@
  '(doom-dashboard-menu-title ((t (:bold t :foreground "slateblue"))))
  '(doom-dashboard-footer-icon ((t (:bold t :foreground "slateblue"))))
 
+ '(doom-modeline-evil-normal-state ((t (:foreground "slateblue"))))
+
+ '(doom-modeline-buffer-modified ((t (:bold t :foreground "green"))))
+
  '(default ((t (:background "black" :foreground "green")))))
 
 (provide 'bit-mage)
