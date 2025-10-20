@@ -1,6 +1,8 @@
 # (Bit-Mage)
 
-A dark theme for GNU Emacs.
+Cyber Medieval Sourceror's Cave
+
+![](bit-mage.png)
 
 ## Installation
 
