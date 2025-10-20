@@ -125,6 +125,9 @@
  '(widget-field-face ((t (:italic t :foreground "#00CC00" :background "black" :slant oblique))))
  '(widget-inactive-face ((t (nil))))
  '(widget-single-line-field-face ((t (nil))))
+
+ '(doom-dashboard-banner ((t (:bold t :foreground "purple"))))
+
  '(default ((t (:background "black" :foreground "green")))))
 
 (provide 'bit-mage)
