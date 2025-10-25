@@ -6,7 +6,7 @@
 
 ![](bit-mage.png)
 
-### CLI (-nw)
+### CLI (-nw) (within tmux, within alacritty)
 
 ![](bit-mage-nw.png)
 
