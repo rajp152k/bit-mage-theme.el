@@ -10,6 +10,10 @@
 
 ![](bit-mage-nw.png)
 
+### CLI (-nw) (within Cool-retro-term)
+
+![](bit-mage-crt.png)
+
 ## Installation
 
 Clone this repository to a local directory:
