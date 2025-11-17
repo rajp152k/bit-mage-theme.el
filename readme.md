@@ -2,7 +2,17 @@
 
 ## **Cyber Medieval Sourceror's Cave**
 
+### GUI
+
 ![](bit-mage.png)
+
+### CLI (-nw) (within tmux, within alacritty)
+
+![](bit-mage-nw.png)
+
+### CLI (-nw) (within Cool-retro-term)
+
+![](bit-mage-crt.png)
 
 ## Installation
 
@@ -35,6 +45,5 @@ To load it automatically on startup, add this to your `init.el`:
 ## Roadmap 
 
 - Progressively covering popular packages' faces for uniformity
-- "That does not look good yet, let me try this change" Driven Development : kinda slow : and breaks everything
 - suggestions welcome
 - also do checkout my doom dotfiles : https://github.com/rajp152k/.dotfiles/tree/master/doom/.config/doom
