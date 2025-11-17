@@ -5,9 +5,9 @@
 ;; Author: Raj Patil <rajp152k@gmail.com>
 ;; Maintainer: Raj Patil <rajp152k@gmail.com>
 ;; Created: October 18, 2025
-;; Modified: October 18, 2025
-;; Version: 0.0.0
-;; Keywords: abbrev bib c calendar comm convenience data docs emulations extensions faces files frames games hardware help hypermedia i18n internal languages lisp local maint mail matching mouse multimedia news outlines processes terminals tex text tools unix vc wp
+;; Modified: Nov 17, 2025
+;; Version: 1.1.0
+;; Keywords: theme bit-mage dark
 ;; Homepage: https://github.com/rp152k/bit-mage-theme
 ;; Package-Requires: ((emacs "24.3"))
 ;;
@@ -81,8 +81,8 @@
  '(ido-indicator-face ((t (:background "slate blue" :foreground "#FFFFFF" :width condensed))))
  '(ido-only-match-face ((t (:foreground "ForestGreen"))))
  '(ido-subdir-face ((t (:foreground "red"))))
- '(isearch ((t (:background "lightslateblue" :foreground "black"))))
- '(isearch-lazy-highlight-face ((t (:background "darkslateblue" :foreground "black"))))
+ '(isearch ((t (:background "lightslateblue" :foreground "gray1"))))
+ '(isearch-lazy-highlight-face ((t (:background "darkslateblue" :foreground "gray1"))))
  '(italic ((t (:italic t :foreground "#00FF00"  :slant oblique))))
  '(menu ((t (:bold t  :foreground "green" :weight semi-bold :box (:line-width -1 :color "#606060")))))
  '(message-cited-text-face ((t (:italic t :foreground "#00CC00"  :slant oblique))))
@@ -104,19 +104,19 @@
  '(paren-face-no-match ((t ( :foreground "red"))))
  '(region ((t (:bold t :background "dark olive green" :foreground "white"))))
  '(scroll-bar ((t (nil))))
- '(secondary-selection ((t (:background "darkslateblue" :foreground "black"))))
+ '(secondary-selection ((t (:background "darkslateblue" :foreground "gray1"))))
  '(semantic-dirty-token-face ((t (:background "gray10"))))
  '(semantic-unmatched-syntax-face ((t (:underline "red"))))
  '(sgml-end-tag-face ((t (:foreground "lightslateblue"))))
  '(sgml-start-tag-face ((t (:foreground "lightslateblue"))))
- '(tabbar-button-face ((t ( :foreground "#00cc00" :box (:line-width 2 :color "black" :style released-button)))))
+ '(tabbar-button-face ((t ( :foreground "#00cc00" :box (:line-width 2 :color "gray1" :style released-button)))))
  '(tabbar-default-face ((t ( :foreground "#00cc00"))))
- '(tabbar-selected-face ((t ( :foreground "springgreen" :box (:line-width 2 :color "black" :style released-button)))))
- '(tabbar-separator-face ((t (:foreground "#00cc00"  :box (:line-width 2 :color "black" :style pressed-button)))))
+ '(tabbar-selected-face ((t ( :foreground "springgreen" :box (:line-width 2 :color "gray1" :style released-button)))))
+ '(tabbar-separator-face ((t (:foreground "#00cc00"  :box (:line-width 2 :color "gray1" :style pressed-button)))))
  '(tabbar-unselected-face ((t ( :foreground "lightslateblue"))))
  '(tool-bar ((t (:box (:line-width 1 :style released-button)))))
  '(tooltip ((t (nil))))
- '(trailing-whitespace ((t (:background "lightseagreen" :foreground "black"))))
+ '(trailing-whitespace ((t (:background "lightseagreen" :foreground "gray1"))))
  '(underline ((t (:foreground "#00CC00"  :underline t))))
  '(variable-pitch ((t (:underline nil :foreground "#00CC00" ))))
  '(widget-button-face ((t (:bold t :foreground "#00CC00" ))))
@@ -136,7 +136,7 @@
 
  '(doom-modeline-buffer-modified ((t (:bold t :foreground "green"))))
 
- '(default ((t (:background "black" :foreground "green")))))
+ '(default ((t (:background "gray1" :foreground "green")))))
 
 (provide 'bit-mage)
 ;;; bit-mage-theme.el ends here
