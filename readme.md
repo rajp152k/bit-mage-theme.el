@@ -106,7 +106,7 @@ ln -s /path/to/bit-mage-theme.el/modules/private/live-coding \
 
 ```elisp
 :private
-(live-coding +flash +pulse +prettify +aggressive)
+(live-coding +pulse +prettify +aggressive)
 ```
 
 3. Run `doom sync` and restart.
@@ -115,16 +115,14 @@ ln -s /path/to/bit-mage-theme.el/modules/private/live-coding \
 
 | Flag | Feature | Description |
 |------|---------|-------------|
-| `+flash` | eval-sexp-fu | Static overlay flash on evaluated s-expressions (0.4s) with CIDER integration |
-| `+pulse` | pulse.el | Animated color-fade on eval — green tint fades back to background over ~0.4s |
+| `+pulse` | pulse.el | Animated purple color-fade on eval for both elisp and CIDER commands |
+| `+flash` | eval-sexp-fu | Static overlay flash (0.4s, purple orchid) — alternative to `+pulse` |
 | `+prettify` | prettify-symbols | Displays `fn` and `lambda` as `λ` in Lisp modes |
 | `+aggressive` | aggressive-indent | Auto-reindent on every keystroke in Lisp modes |
 
-`+flash` uses the `eval-sexp-fu` package which creates a brief overlay on the evaluated sexp. CIDER commands (`cider-eval-last-sexp`, `cider-eval-defun-at-point`, `cider-pprint-eval-last-sexp`) are automatically hooked.
+`+pulse` (recommended) uses Emacs built-in `pulse.el` for an animated fade effect. On eval, the sexp region flashes with a purple tint (`#2a0040`) that gradually fades back to the background. Errors flash red (`#330000`). Works for both elisp (`C-x C-e`, `eval-defun`) and CIDER (`cider-eval-last-sexp`, `cider-eval-defun-at-point`, `cider-pprint-eval-last-sexp`).
 
-`+pulse` uses Emacs built-in `pulse.el` for an animated fade effect. On eval, the sexp region flashes with a green tint (`#003300`) that gradually fades back to the background. Errors flash red (`#330000`).
-
-Both `+flash` and `+pulse` can be enabled simultaneously.
+`+flash` uses `eval-sexp-fu` for a static overlay approach. Use one or the other — `+pulse` is the recommended default.
 
 ## Package Coverage
 

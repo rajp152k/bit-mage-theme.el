@@ -19,13 +19,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - ERT tests for all new gap faces (5 new test groups, total 25 tests)
 
 - Doom +live-coding module with emacs-live-inspired features:
-  - `+flash`: eval-sexp-fu integration with CIDER hooks (0.4s flash duration)
-  - `+pulse`: built-in pulse.el animated color-fade on eval (green tint)
+  - `+flash`: eval-sexp-fu static overlay flash with CIDER hooks (0.4s, purple orchid)
+  - `+pulse`: built-in pulse.el animated color-fade on eval (purple tint `#2a0040`, fades to background)
   - `+prettify`: lambda prettification in Lisp modes (fn/lambda → λ)
   - `+aggressive`: aggressive auto-indentation for Lisp modes
+- Incantation project plan — AI-reactive music generation for Emacs (Phase 2)
 
 ### Changed
 - Rainbow-delimiters now use 4-color rotation (green → blue → cyan → purple) instead of green-heavy progression
+- eval-sexp-fu flash and pulse faces switched from green to purple orchid (`#2a0040`)
+- `+pulse` now handles all eval commands (elisp + CIDER) — no longer split with `+flash`
 
 ## [2.0.0] - 2024-01-28
 
