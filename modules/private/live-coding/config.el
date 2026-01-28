@@ -30,8 +30,7 @@
 ;;;; Pulse-based flash (+pulse)
 ;;
 ;; Uses Emacs built-in pulse.el for a color-fade animation effect
-;; on evaluated s-expressions. More visually distinctive than the
-;; static overlay from eval-sexp-fu.
+;; on evaluated s-expressions. Animated purple fade for all eval commands.
 
 (when (modulep! +pulse)
   (require 'pulse)
@@ -40,26 +39,16 @@
         pulse-iterations 12
         pulse-delay 0.03)
 
-  ;; When +flash is also enabled, skip pulse advice on CIDER commands
-  ;; since eval-sexp-fu already handles those. Only add pulse to
-  ;; commands that eval-sexp-fu doesn't cover.
-  (unless (modulep! +flash)
-    ;; Emacs Lisp: pulse on C-x C-e and eval-defun
-    (after! elisp-mode
-      (advice-add #'eval-last-sexp :around #'+live-coding-pulse-on-eval-a)
-      (advice-add #'eval-defun :around #'+live-coding-pulse-on-eval-a))
+  ;; Emacs Lisp
+  (after! elisp-mode
+    (advice-add #'eval-last-sexp :around #'+live-coding-pulse-on-eval-a)
+    (advice-add #'eval-defun :around #'+live-coding-pulse-on-eval-a))
 
-    ;; CIDER: pulse on eval commands
-    (after! cider
-      (advice-add #'cider-eval-last-sexp :around #'+live-coding-pulse-on-eval-a)
-      (advice-add #'cider-eval-defun-at-point :around #'+live-coding-pulse-defun-a)
-      (advice-add #'cider-pprint-eval-last-sexp :around #'+live-coding-pulse-on-eval-a)))
-
-  ;; When +flash is enabled, only add pulse to elisp (eval-sexp-fu handles CIDER)
-  (when (modulep! +flash)
-    (after! elisp-mode
-      (advice-add #'eval-last-sexp :around #'+live-coding-pulse-on-eval-a)
-      (advice-add #'eval-defun :around #'+live-coding-pulse-on-eval-a))))
+  ;; CIDER
+  (after! cider
+    (advice-add #'cider-eval-last-sexp :around #'+live-coding-pulse-on-eval-a)
+    (advice-add #'cider-eval-defun-at-point :around #'+live-coding-pulse-defun-a)
+    (advice-add #'cider-pprint-eval-last-sexp :around #'+live-coding-pulse-on-eval-a)))
 
 ;;;; Lambda prettification (+prettify)
 
