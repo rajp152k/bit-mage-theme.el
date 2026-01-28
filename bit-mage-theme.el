@@ -7,11 +7,12 @@
 ;; Created: October 18, 2025
 ;; Modified: Jan 18, 2026
 ;; Version: 2.0.0
-;; Keywords: theme bit-mage dark cyberpunk
+;; Keywords: faces themes
 ;; Homepage: https://github.com/rajp152k/bit-mage-theme
-;; Package-Requires: ((emacs "24.3"))
+;; Package-Requires: ((emacs "28.1"))
 ;;
 ;; This file is not part of GNU Emacs.
+;; SPDX-License-Identifier: GPL-3.0-or-later
 ;;
 ;;; Commentary:
 ;;
