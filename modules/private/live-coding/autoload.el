@@ -4,10 +4,10 @@
 
 (defface +live-coding-pulse-face
   '((((background dark))
-     :background "#003300" :extend t)
+     :background "#2a0040" :extend t)
     (t
-     :background "#AAFFAA" :extend t))
-  "Face for pulse flash on eval. Green tint matching bit-mage theme."
+     :background "#DDAAFF" :extend t))
+  "Face for pulse flash on eval. Purple tint matching bit-mage theme."
   :group 'live-coding)
 
 (defface +live-coding-pulse-error-face
