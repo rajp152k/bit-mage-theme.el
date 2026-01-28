@@ -7,7 +7,7 @@ compile:
 	$(BATCH) -f batch-byte-compile bit-mage-theme.el
 
 test:
-	@echo "Tests will run after test/bit-mage-test.el is created"
+	$(BATCH) -l test/bit-mage-test.el -f ert-run-tests-batch-and-exit
 
 clean:
 	rm -f *.elc
