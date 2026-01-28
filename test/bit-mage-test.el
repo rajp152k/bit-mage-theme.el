@@ -206,5 +206,64 @@
          (contrast (bit-mage-test--contrast-ratio fg bg)))
     (should (>= contrast 4.5))))
 
+(ert-deftest bit-mage-test-smartparens-faces ()
+  "Test smartparens faces are properly defined."
+  (unless (facep 'sp-pair-overlay-face)
+    (defface sp-pair-overlay-face '((t)) "Test face"))
+  (unless (facep 'sp-wrap-overlay-face)
+    (defface sp-wrap-overlay-face '((t)) "Test face"))
+  (unless (facep 'sp-wrap-tag-overlay-face)
+    (defface sp-wrap-tag-overlay-face '((t)) "Test face"))
+  (load-theme 'bit-mage t)
+  (should-not (equal (face-attribute 'sp-pair-overlay-face :background nil t) 'unspecified))
+  (should-not (equal (face-attribute 'sp-wrap-overlay-face :background nil t) 'unspecified))
+  (should-not (equal (face-attribute 'sp-wrap-tag-overlay-face :background nil t) 'unspecified)))
+
+(ert-deftest bit-mage-test-git-commit-faces ()
+  "Test git-commit faces are properly defined."
+  (unless (facep 'git-commit-summary)
+    (defface git-commit-summary '((t)) "Test face"))
+  (unless (facep 'git-commit-comment-heading)
+    (defface git-commit-comment-heading '((t)) "Test face"))
+  (unless (facep 'git-commit-comment-branch-local)
+    (defface git-commit-comment-branch-local '((t)) "Test face"))
+  (unless (facep 'git-commit-nonempty-second-line)
+    (defface git-commit-nonempty-second-line '((t)) "Test face"))
+  (load-theme 'bit-mage t)
+  (should-not (equal (face-attribute 'git-commit-summary :foreground nil t) 'unspecified))
+  (should-not (equal (face-attribute 'git-commit-comment-heading :foreground nil t) 'unspecified))
+  (should-not (equal (face-attribute 'git-commit-comment-branch-local :foreground nil t) 'unspecified))
+  (should-not (equal (face-attribute 'git-commit-nonempty-second-line :foreground nil t) 'unspecified)))
+
+(ert-deftest bit-mage-test-hl-sexp-face ()
+  "Test hl-sexp face is properly defined."
+  (unless (facep 'hl-sexp-face)
+    (defface hl-sexp-face '((t)) "Test face"))
+  (load-theme 'bit-mage t)
+  (should-not (equal (face-attribute 'hl-sexp-face :background nil t) 'unspecified)))
+
+(ert-deftest bit-mage-test-volatile-highlights-face ()
+  "Test volatile-highlights face is properly defined."
+  (unless (facep 'vhl/default-face)
+    (defface vhl/default-face '((t)) "Test face"))
+  (load-theme 'bit-mage t)
+  (should-not (equal (face-attribute 'vhl/default-face :background nil t) 'unspecified)))
+
+(ert-deftest bit-mage-test-apropos-faces ()
+  "Test apropos faces are properly defined."
+  (unless (facep 'apropos-symbol)
+    (defface apropos-symbol '((t)) "Test face"))
+  (unless (facep 'apropos-function-button)
+    (defface apropos-function-button '((t)) "Test face"))
+  (unless (facep 'apropos-variable-button)
+    (defface apropos-variable-button '((t)) "Test face"))
+  (unless (facep 'apropos-misc-button)
+    (defface apropos-misc-button '((t)) "Test face"))
+  (load-theme 'bit-mage t)
+  (should-not (equal (face-attribute 'apropos-symbol :foreground nil t) 'unspecified))
+  (should-not (equal (face-attribute 'apropos-function-button :foreground nil t) 'unspecified))
+  (should-not (equal (face-attribute 'apropos-variable-button :foreground nil t) 'unspecified))
+  (should-not (equal (face-attribute 'apropos-misc-button :foreground nil t) 'unspecified)))
+
 (provide 'bit-mage-test)
 ;;; bit-mage-test.el ends here

@@ -11,6 +11,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - eval-sexp-fu flash faces for evaluating Lisp expressions
 - Comprehensive CIDER faces for Clojure development (36 faces)
 - ERT tests for eval-sexp-fu and CIDER faces with WCAG AA contrast validation
+- Smartparens faces (pair, wrap, tag overlays)
+- git-commit faces (summary, heading, branch, action, file, second-line)
+- hl-sexp face for s-expression highlighting
+- volatile-highlights face for recently changed regions
+- Apropos faces (symbol, function/variable/misc buttons, keybinding, plist, property)
+- ERT tests for all new gap faces (5 new test groups, total 25 tests)
 
 ## [2.0.0] - 2024-01-28
 

@@ -1082,6 +1082,41 @@
    ;; Namespace browser
    `(cider-browse-ns-extra-info-face ((t (:foreground ,green-forest :italic t))))
 
+;;;;; Smartparens
+
+   `(sp-pair-overlay-face ((t (:background ,bg-highlight))))
+   `(sp-wrap-overlay-face ((t (:background ,green-dark))))
+   `(sp-wrap-tag-overlay-face ((t (:background ,bg-highlight))))
+
+;;;;; git-commit
+
+   `(git-commit-summary ((t (:foreground ,green-bright))))
+   `(git-commit-comment-heading ((t (:foreground ,green-neon :bold t))))
+   `(git-commit-comment-branch-local ((t (:foreground ,green-spring :bold t))))
+   `(git-commit-comment-branch-remote ((t (:foreground ,blue-light :bold t))))
+   `(git-commit-comment-action ((t (:foreground ,blue-slate :bold t))))
+   `(git-commit-comment-file ((t (:foreground ,green-pale))))
+   `(git-commit-nonempty-second-line ((t (:foreground ,orange-warning))))
+
+;;;;; hl-sexp
+
+   `(hl-sexp-face ((t (:background ,bg-highlight))))
+
+;;;;; volatile-highlights
+
+   `(vhl/default-face ((t (:background ,bg-highlight))))
+
+;;;;; Apropos
+
+   `(apropos-symbol ((t (:foreground ,green-neon :bold t))))
+   `(apropos-function-button ((t (:foreground ,blue-light :underline t))))
+   `(apropos-variable-button ((t (:foreground ,green-pale :underline t))))
+   `(apropos-misc-button ((t (:foreground ,blue-slate :underline t))))
+   `(apropos-user-option-button ((t (:foreground ,green-spring :underline t))))
+   `(apropos-plist ((t (:foreground ,green-forest :italic t))))
+   `(apropos-property ((t (:foreground ,cyan-info))))
+   `(apropos-keybinding ((t (:foreground ,blue-light :bold t))))
+
 ;;;;; Backward compatibility aliases
 
    `(custom-button-face ((t (:bold t :foreground ,green-bright))))
