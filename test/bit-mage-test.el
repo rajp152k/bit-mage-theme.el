@@ -121,5 +121,90 @@
          (contrast (bit-mage-test--contrast-ratio fg bg)))
     (should (>= contrast 4.5))))
 
+;;;; eval-sexp-fu Tests
+
+(ert-deftest bit-mage-test-eval-sexp-fu-faces ()
+  "Test eval-sexp-fu flash faces are properly defined."
+  ;; Pre-create faces (normally done by eval-sexp-fu package)
+  (unless (facep 'eval-sexp-fu-flash)
+    (defface eval-sexp-fu-flash '((t)) "Test face"))
+  (unless (facep 'eval-sexp-fu-flash-error)
+    (defface eval-sexp-fu-flash-error '((t)) "Test face"))
+  (load-theme 'bit-mage t)
+  (should-not (equal (face-attribute 'eval-sexp-fu-flash :background nil t) 'unspecified))
+  (should-not (equal (face-attribute 'eval-sexp-fu-flash :foreground nil t) 'unspecified))
+  (should-not (equal (face-attribute 'eval-sexp-fu-flash-error :foreground nil t) 'unspecified)))
+
+;;;; CIDER Tests
+
+(ert-deftest bit-mage-test-cider-overlay-faces ()
+  "Test CIDER result overlay faces are properly defined."
+  (unless (facep 'cider-result-overlay-face)
+    (defface cider-result-overlay-face '((t)) "Test face"))
+  (unless (facep 'cider-error-overlay-face)
+    (defface cider-error-overlay-face '((t)) "Test face"))
+  (load-theme 'bit-mage t)
+  (should-not (equal (face-attribute 'cider-result-overlay-face :foreground nil t) 'unspecified))
+  (should-not (equal (face-attribute 'cider-error-overlay-face :foreground nil t) 'unspecified)))
+
+(ert-deftest bit-mage-test-cider-repl-faces ()
+  "Test CIDER REPL faces are properly defined."
+  (unless (facep 'cider-repl-prompt-face)
+    (defface cider-repl-prompt-face '((t)) "Test face"))
+  (unless (facep 'cider-repl-result-face)
+    (defface cider-repl-result-face '((t)) "Test face"))
+  (unless (facep 'cider-repl-stderr-face)
+    (defface cider-repl-stderr-face '((t)) "Test face"))
+  (load-theme 'bit-mage t)
+  (should-not (equal (face-attribute 'cider-repl-prompt-face :foreground nil t) 'unspecified))
+  (should-not (equal (face-attribute 'cider-repl-result-face :foreground nil t) 'unspecified))
+  (should-not (equal (face-attribute 'cider-repl-stderr-face :foreground nil t) 'unspecified)))
+
+(ert-deftest bit-mage-test-cider-test-faces ()
+  "Test CIDER test result faces are properly defined."
+  (unless (facep 'cider-test-success-face)
+    (defface cider-test-success-face '((t)) "Test face"))
+  (unless (facep 'cider-test-failure-face)
+    (defface cider-test-failure-face '((t)) "Test face"))
+  (unless (facep 'cider-test-error-face)
+    (defface cider-test-error-face '((t)) "Test face"))
+  (load-theme 'bit-mage t)
+  (should-not (equal (face-attribute 'cider-test-success-face :foreground nil t) 'unspecified))
+  (should-not (equal (face-attribute 'cider-test-failure-face :foreground nil t) 'unspecified))
+  (should-not (equal (face-attribute 'cider-test-error-face :foreground nil t) 'unspecified)))
+
+(ert-deftest bit-mage-test-cider-debug-faces ()
+  "Test CIDER debug faces are properly defined."
+  (unless (facep 'cider-debug-code-overlay-face)
+    (defface cider-debug-code-overlay-face '((t)) "Test face"))
+  (unless (facep 'cider-enlightened-face)
+    (defface cider-enlightened-face '((t)) "Test face"))
+  (load-theme 'bit-mage t)
+  (should-not (equal (face-attribute 'cider-debug-code-overlay-face :background nil t) 'unspecified))
+  (should-not (equal (face-attribute 'cider-enlightened-face :foreground nil t) 'unspecified)))
+
+(ert-deftest bit-mage-test-cider-stacktrace-faces ()
+  "Test CIDER stacktrace faces are properly defined."
+  (unless (facep 'cider-stacktrace-error-class-face)
+    (defface cider-stacktrace-error-class-face '((t)) "Test face"))
+  (unless (facep 'cider-stacktrace-fn-face)
+    (defface cider-stacktrace-fn-face '((t)) "Test face"))
+  (unless (facep 'cider-stacktrace-ns-face)
+    (defface cider-stacktrace-ns-face '((t)) "Test face"))
+  (load-theme 'bit-mage t)
+  (should-not (equal (face-attribute 'cider-stacktrace-error-class-face :foreground nil t) 'unspecified))
+  (should-not (equal (face-attribute 'cider-stacktrace-fn-face :foreground nil t) 'unspecified))
+  (should-not (equal (face-attribute 'cider-stacktrace-ns-face :foreground nil t) 'unspecified)))
+
+(ert-deftest bit-mage-test-eval-flash-wcag-contrast ()
+  "Test that eval-sexp-fu-flash has sufficient WCAG AA contrast."
+  (unless (facep 'eval-sexp-fu-flash)
+    (defface eval-sexp-fu-flash '((t)) "Test face"))
+  (load-theme 'bit-mage t)
+  (let* ((fg (face-attribute 'eval-sexp-fu-flash :foreground nil t))
+         (bg (face-attribute 'eval-sexp-fu-flash :background nil t))
+         (contrast (bit-mage-test--contrast-ratio fg bg)))
+    (should (>= contrast 4.5))))
+
 (provide 'bit-mage-test)
 ;;; bit-mage-test.el ends here
