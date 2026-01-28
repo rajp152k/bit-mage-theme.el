@@ -8,13 +8,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ### Added
-- New features and enhancements coming in future releases
-
-### Changed
-- Improvements to existing functionality
-
-### Fixed
-- Bug fixes and corrections
+- eval-sexp-fu flash faces for evaluating Lisp expressions
+- Comprehensive CIDER faces for Clojure development (36 faces)
+- ERT tests for eval-sexp-fu and CIDER faces with WCAG AA contrast validation
 
 ## [2.0.0] - 2024-01-28
 
