@@ -4,7 +4,7 @@
 ;; Flash-on-eval: highlight evaluated s-expressions
 (when (modulep! +flash)
   (package! eval-sexp-fu
-    :recipe (:host github :repo "npostavs/eval-sexp-fu")
+    :recipe (:host github :repo "hchbaw/eval-sexp-fu.el")
     :pin "36d2fe3bcf602e15ca10a7f487da103515ef391a")
   (when (modulep! :lang clojure)
     (package! cider-eval-sexp-fu
