@@ -18,6 +18,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Apropos faces (symbol, function/variable/misc buttons, keybinding, plist, property)
 - ERT tests for all new gap faces (5 new test groups, total 25 tests)
 
+### Changed
+- Rainbow-delimiters now use 4-color rotation (green → blue → cyan → purple) instead of green-heavy progression
+
 ## [2.0.0] - 2024-01-28
 
 ### Added

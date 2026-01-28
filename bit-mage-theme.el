@@ -978,14 +978,15 @@
 
 ;;;;; Rainbow delimiters
 
+   ;; 4-color rotation: green → blue → cyan → purple (repeat with variants)
    `(rainbow-delimiters-depth-1-face ((t (:foreground ,green-neon))))
    `(rainbow-delimiters-depth-2-face ((t (:foreground ,blue-slate))))
-   `(rainbow-delimiters-depth-3-face ((t (:foreground ,green-spring))))
-   `(rainbow-delimiters-depth-4-face ((t (:foreground ,cyan-info))))
-   `(rainbow-delimiters-depth-5-face ((t (:foreground ,green-bright))))
+   `(rainbow-delimiters-depth-3-face ((t (:foreground ,cyan-info))))
+   `(rainbow-delimiters-depth-4-face ((t (:foreground ,purple-orchid))))
+   `(rainbow-delimiters-depth-5-face ((t (:foreground ,green-spring))))
    `(rainbow-delimiters-depth-6-face ((t (:foreground ,blue-light))))
-   `(rainbow-delimiters-depth-7-face ((t (:foreground ,purple-orchid))))
-   `(rainbow-delimiters-depth-8-face ((t (:foreground ,green-forest))))
+   `(rainbow-delimiters-depth-7-face ((t (:foreground ,cyan-info))))
+   `(rainbow-delimiters-depth-8-face ((t (:foreground ,purple-orchid))))
    `(rainbow-delimiters-depth-9-face ((t (:foreground ,orange-warning))))
    `(rainbow-delimiters-unmatched-face ((t (:foreground ,red-error :bold t :underline t))))
    `(rainbow-delimiters-mismatched-face ((t (:foreground ,red-error :bold t :underline t))))
