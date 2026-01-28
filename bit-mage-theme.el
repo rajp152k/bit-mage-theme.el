@@ -1021,6 +1021,67 @@
 
    `(yas-field-highlight-face ((t (:background ,bg-highlight))))
 
+;;;;; eval-sexp-fu
+
+   `(eval-sexp-fu-flash ((t (:foreground ,green-neon :background ,bg-dark :bold t))))
+   `(eval-sexp-fu-flash-error ((t (:foreground ,red-error :background ,bg-highlight :bold t))))
+
+;;;;; CIDER
+
+   ;; Result overlays
+   `(cider-result-overlay-face ((t (:foreground ,green-spring :background ,bg-dark :box (:line-width 1 :color ,green-dark)))))
+   `(cider-error-overlay-face ((t (:foreground ,red-error :background ,bg-dark :box (:line-width 1 :color ,red-error)))))
+   `(cider-fragile-button-face ((t (:foreground ,orange-warning :box (:line-width 1 :color ,orange-warning)))))
+   `(cider-fringe-good-face ((t (:foreground ,green-spring))))
+
+   ;; REPL
+   `(cider-repl-prompt-face ((t (:foreground ,green-neon :bold t))))
+   `(cider-repl-input-face ((t (:foreground ,green-bright))))
+   `(cider-repl-result-face ((t (:foreground ,green-spring))))
+   `(cider-repl-stdout-face ((t (:foreground ,green-pale))))
+   `(cider-repl-stderr-face ((t (:foreground ,red-error))))
+
+   ;; Test results
+   `(cider-test-success-face ((t (:foreground ,green-spring :bold t))))
+   `(cider-test-failure-face ((t (:foreground ,red-error :bold t))))
+   `(cider-test-error-face ((t (:foreground ,orange-warning :bold t))))
+
+   ;; Debug
+   `(cider-debug-code-overlay-face ((t (:background ,bg-highlight :foreground ,green-neon))))
+   `(cider-debug-prompt-face ((t (:foreground ,orange-warning :bold t))))
+   `(cider-enlightened-face ((t (:foreground ,green-spring :background ,bg-highlight :bold t))))
+   `(cider-enlightened-local-face ((t (:foreground ,cyan-info :background ,bg-highlight))))
+
+   ;; Code annotations
+   `(cider-deprecated-face ((t (:foreground ,gray-light :strike-through t))))
+   `(cider-instrumented-face ((t (:foreground ,orange-warning :background ,bg-dark :box (:line-width 1 :color ,orange-warning)))))
+   `(cider-traced-face ((t (:foreground ,cyan-info :background ,bg-dark :box (:line-width 1 :color ,cyan-info)))))
+   `(cider-reader-conditional-face ((t (:foreground ,gray-light))))
+
+   ;; Eval highlights
+   `(cider-error-highlight-face ((t (:underline (:style wave :color ,red-error)))))
+   `(cider-warning-highlight-face ((t (:underline (:style wave :color ,orange-warning)))))
+
+   ;; Stacktrace
+   `(cider-stacktrace-face ((t (:foreground ,green-bright))))
+   `(cider-stacktrace-error-class-face ((t (:foreground ,red-error :bold t))))
+   `(cider-stacktrace-error-message-face ((t (:foreground ,orange-warning))))
+   `(cider-stacktrace-fn-face ((t (:foreground ,green-neon))))
+   `(cider-stacktrace-ns-face ((t (:foreground ,blue-slate))))
+   `(cider-stacktrace-filter-active-face ((t (:foreground ,green-spring :underline t))))
+   `(cider-stacktrace-filter-inactive-face ((t (:foreground ,gray-light))))
+   `(cider-stacktrace-promoted-button-face ((t (:foreground ,green-bright :box (:line-width 1 :color ,green-dark)))))
+   `(cider-stacktrace-suppressed-button-face ((t (:foreground ,gray-light :box (:line-width 1 :color ,gray-dark)))))
+
+   ;; Documentation viewer
+   `(cider-docview-emphasis-face ((t (:foreground ,green-spring :italic t))))
+   `(cider-docview-literal-face ((t (:foreground ,green-bright :background ,bg-dark))))
+   `(cider-docview-strong-face ((t (:foreground ,green-neon :bold t))))
+   `(cider-docview-table-border-face ((t (:foreground ,green-dark))))
+
+   ;; Namespace browser
+   `(cider-browse-ns-extra-info-face ((t (:foreground ,green-forest :italic t))))
+
 ;;;;; Backward compatibility aliases
 
    `(custom-button-face ((t (:bold t :foreground ,green-bright))))
