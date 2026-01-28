@@ -18,6 +18,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Apropos faces (symbol, function/variable/misc buttons, keybinding, plist, property)
 - ERT tests for all new gap faces (5 new test groups, total 25 tests)
 
+- Doom +live-coding module with emacs-live-inspired features:
+  - `+flash`: eval-sexp-fu integration with CIDER hooks (0.4s flash duration)
+  - `+pulse`: built-in pulse.el animated color-fade on eval (green tint)
+  - `+prettify`: lambda prettification in Lisp modes (fn/lambda → λ)
+  - `+aggressive`: aggressive auto-indentation for Lisp modes
+
 ### Changed
 - Rainbow-delimiters now use 4-color rotation (green → blue → cyan → purple) instead of green-heavy progression
 
