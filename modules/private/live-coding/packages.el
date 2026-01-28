@@ -14,4 +14,4 @@
 ;; Aggressive indentation for Lisp modes
 (when (modulep! +aggressive)
   (package! aggressive-indent
-    :pin "a437a45868f94b486571b3272e8a03f0082074d2"))
+    :pin "a437a45868f94b77362c6b913c5ee8e67b273c42"))
