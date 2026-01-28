@@ -1024,7 +1024,7 @@
 
 ;;;;; eval-sexp-fu
 
-   `(eval-sexp-fu-flash ((t (:foreground ,purple-orchid :background "#2a0040" :bold t))))
+   `(eval-sexp-fu-flash ((t (:foreground "#e0b0ff" :background "#2a0040" :bold t))))
    `(eval-sexp-fu-flash-error ((t (:foreground ,red-error :background ,bg-highlight :bold t))))
 
 ;;;;; CIDER

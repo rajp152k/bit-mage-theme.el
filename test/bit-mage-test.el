@@ -19,9 +19,19 @@
 
 ;;;; Helper Functions
 
+(defun bit-mage-test--hex-to-rgb (hex)
+  "Parse HEX color string (#RRGGBB) to list of floats (0.0-1.0).
+Falls back to `color-name-to-rgb' for named colors."
+  (if (and (stringp hex) (string-match "\\`#\\([0-9a-fA-F]\\{2\\}\\)\\([0-9a-fA-F]\\{2\\}\\)\\([0-9a-fA-F]\\{2\\}\\)\\'" hex))
+      (list (/ (string-to-number (match-string 1 hex) 16) 255.0)
+            (/ (string-to-number (match-string 2 hex) 16) 255.0)
+            (/ (string-to-number (match-string 3 hex) 16) 255.0))
+    (color-name-to-rgb hex)))
+
 (defun bit-mage-test--relative-luminance (color)
-  "Calculate relative luminance for COLOR using WCAG formula."
-  (let* ((rgb (color-name-to-rgb color))
+  "Calculate relative luminance for COLOR using WCAG formula.
+Parses hex colors directly to avoid batch-mode color quantization."
+  (let* ((rgb (bit-mage-test--hex-to-rgb color))
          (r (nth 0 rgb))
          (g (nth 1 rgb))
          (b (nth 2 rgb)))
