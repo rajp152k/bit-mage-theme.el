@@ -39,25 +39,25 @@
        (bg-region    "purple4")
 
        ;; Foreground shades
-       (fg-main      "green")
-       (fg-dim       "dark green")
+       (fg-main      "#22DD22")
+       (fg-dim       "#1A9E1A")
        (fg-bright    "#00FF00")
-       (fg-muted     "#00CC00")
+       (fg-muted     "#00DD00")
 
        ;; Primary accent: Greens (the hacker matrix vibe)
        (green-neon      "#00FF00")
        (green-bright    "#00CC00")
-       (green-medium    "green")
-       (green-spring    "spring green")
-       (green-pale      "pale green")
-       (green-forest    "ForestGreen")
-       (green-dark      "dark green")
+       (green-medium    "#22CC22")
+       (green-spring    "#00FF7F")
+       (green-pale      "#88EE88")
+       (green-forest    "#44BB44")
+       (green-dark      "#2A8E2A")
        (green-sea       "lightseagreen")
 
        ;; Secondary accent: Blues/Purples (the cyber wizard vibe)
        (blue-slate      "slateblue")
        (blue-light      "lightslateblue")
-       (blue-dark       "darkslateblue")
+       (blue-dark       "#7B68EE")
        (blue-deep       "darkblue")
 
        ;; Tertiary accent: Purples (the arcane vibe)
@@ -74,7 +74,7 @@
        ;; Neutrals
        (white           "white")
        (black           "#000000")
-       (gray-light      "#606060")
+       (gray-light      "#808080")
        (gray-dark       "gray10"))
 
 ;;;; Face Definitions
