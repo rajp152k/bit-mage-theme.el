@@ -26,6 +26,54 @@
 (deftheme bit-mage
   "Cyber Medieval Sourceror's Cave - A dark cyberpunk hacker theme.")
 
+(defgroup bit-mage nil
+  "Bit Mage theme faces."
+  :group 'faces)
+
+(defface bit-mage-org-gtd-tag-qa '((t (:inherit org-tag)))
+  "Face for Quick Actionable GTD tags."
+  :group 'bit-mage)
+(defface bit-mage-org-gtd-tag-qr '((t (:inherit org-tag)))
+  "Face for Quick Consumable GTD tags."
+  :group 'bit-mage)
+(defface bit-mage-org-gtd-tag-d '((t (:inherit org-tag)))
+  "Face for Deep Study GTD tags."
+  :group 'bit-mage)
+(defface bit-mage-org-gtd-tag-r '((t (:inherit org-tag)))
+  "Face for Research / Recon GTD tags."
+  :group 'bit-mage)
+(defface bit-mage-org-gtd-tag-p '((t (:inherit org-tag)))
+  "Face for Project / Build GTD tags."
+  :group 'bit-mage)
+(defface bit-mage-org-gtd-tag-w '((t (:inherit org-tag)))
+  "Face for Writing / Synthesis GTD tags."
+  :group 'bit-mage)
+(defface bit-mage-org-gtd-tag-c '((t (:inherit org-tag)))
+  "Face for Collaboration GTD tags."
+  :group 'bit-mage)
+(defface bit-mage-org-gtd-tag-m '((t (:inherit org-tag)))
+  "Face for Meditation / Ideation GTD tags."
+  :group 'bit-mage)
+(defface bit-mage-org-gtd-tag-ref '((t (:inherit org-tag)))
+  "Face for Reference / Annotation GTD tags."
+  :group 'bit-mage)
+(defface bit-mage-org-gtd-tag-ev '((t (:inherit org-tag)))
+  "Face for Event / Deadline GTD tags."
+  :group 'bit-mage)
+(defface bit-mage-org-gtd-tag-tk '((t (:inherit org-tag)))
+  "Face for Tickler / Deferred GTD tags."
+  :group 'bit-mage)
+
+(defface bit-mage-org-gtd-priority-a '((t (:inherit org-priority)))
+  "Face for Org GTD priority A cookies."
+  :group 'bit-mage)
+(defface bit-mage-org-gtd-priority-b '((t (:inherit org-priority)))
+  "Face for Org GTD priority B cookies."
+  :group 'bit-mage)
+(defface bit-mage-org-gtd-priority-c '((t (:inherit org-priority)))
+  "Face for Org GTD priority C cookies."
+  :group 'bit-mage)
+
 ;;;; Color Palette
 ;; Define colors as variables for consistency and maintainability
 
@@ -70,6 +118,10 @@
        (orange-warning  "#ffaf00")
        (yellow-info     "#ffd700")
        (cyan-info       "cyan")
+
+       ;; GTD/org semantic accent: keep work-mode sigils firmly inside the
+       ;; Bit Mage green language rather than giving them rainbow badges.
+       (gtd-sigil      green-neon)
 
        ;; Neutrals
        (white           "white")
@@ -403,6 +455,27 @@
    `(org-footnote ((t (:foreground ,cyan-info :underline t))))
    `(org-tag ((t (:foreground ,green-forest :bold t))))
    `(org-priority ((t (:foreground ,orange-warning :bold t))))
+
+   ;; GTD work-mode tags: large, bold green sigils that match Bit Mage's
+   ;; monochrome hacker aesthetic. The tag text itself carries the category;
+   ;; color stays calm and consistent.
+   `(bit-mage-org-gtd-tag-qa ((t (:foreground ,gtd-sigil :weight bold))))
+   `(bit-mage-org-gtd-tag-qr ((t (:foreground ,gtd-sigil :weight bold))))
+   `(bit-mage-org-gtd-tag-d ((t (:foreground ,gtd-sigil :weight bold))))
+   `(bit-mage-org-gtd-tag-r ((t (:foreground ,gtd-sigil :weight bold))))
+   `(bit-mage-org-gtd-tag-p ((t (:foreground ,gtd-sigil :weight bold))))
+   `(bit-mage-org-gtd-tag-w ((t (:foreground ,gtd-sigil :weight bold))))
+   `(bit-mage-org-gtd-tag-c ((t (:foreground ,gtd-sigil :weight bold))))
+   `(bit-mage-org-gtd-tag-m ((t (:foreground ,gtd-sigil :weight bold))))
+   `(bit-mage-org-gtd-tag-ref ((t (:foreground ,gtd-sigil :weight bold))))
+   `(bit-mage-org-gtd-tag-ev ((t (:foreground ,gtd-sigil :weight bold))))
+   `(bit-mage-org-gtd-tag-tk ((t (:foreground ,gtd-sigil :weight bold))))
+
+   ;; GTD priorities follow the same visual language: green, large, bold.
+   `(bit-mage-org-gtd-priority-a ((t (:foreground ,gtd-sigil :weight bold))))
+   `(bit-mage-org-gtd-priority-b ((t (:foreground ,gtd-sigil :weight bold))))
+   `(bit-mage-org-gtd-priority-c ((t (:foreground ,gtd-sigil :weight bold))))
+
    `(org-checkbox ((t (:foreground ,green-bright :bold t))))
    `(org-checkbox-statistics-todo ((t (:foreground ,orange-warning))))
    `(org-checkbox-statistics-done ((t (:foreground ,green-spring))))
